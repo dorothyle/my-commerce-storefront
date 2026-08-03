@@ -14,6 +14,34 @@
   color: var(--color-neutral-800);
 }
 
+.pdp-tagline {
+  font-size: 1.5rem;
+  color: #2d7d2d;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.product-details__stock {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+.stock-badge--in-stock {
+  color: #2d7d2d;
+}
+.stock-badge--out-of-stock {
+  color: #cc0000;
+}
+
+.metaTitle dt {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.metaTitle dd {
+  margin-left: 0;
+  color: #444;
+}
+
 .product-details__alert {
   margin-top: var(--spacing-small);
   margin-bottom: var(--spacing-small);
