@@ -7,7 +7,7 @@ async function fetchCategoryProducts (categoryId, maxProducts) {
    query GetCategoryProducts($categoryId: String!, $pageSize: Int!) {
       productSearch(
         phrase: ""
-        filter: [{ attribute: "categoryIds", eq: $categoryId }]
+        filter: [{ attribute: "categoryPath", eq: $categoryId }]
         page_size: $pageSize
       ) {
         items {
