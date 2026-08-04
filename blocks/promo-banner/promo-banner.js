@@ -4,7 +4,7 @@ import { CS_FETCH_GRAPHQL, getProductLink } from '../../scripts/commerce.js';
 
 async function fetchCategoryProducts (categoryId, maxProducts) {
   const query = `
-    query GetCategoryProducts($categoryId: String!, $pageSize: Int!) {
+   query GetCategoryProducts($categoryId: String!, $pageSize: Int!) {
       productSearch(
         phrase: ""
         filter: [{ attribute: "categoryIds", eq: $categoryId }]
@@ -19,6 +19,11 @@ async function fetchCategoryProducts (categoryId, maxProducts) {
               url
               label
             }
+            ... on SimpleProductView {
+              price { 
+                final { amount { value currency } }
+              }
+            } 
           }
         }
       }
